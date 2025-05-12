@@ -1,0 +1,14 @@
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\bin\Debug\net8.0\5T25_Limet_BatailleNaval.exe
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\bin\Debug\net8.0\5T25_Limet_BatailleNaval.deps.json
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\bin\Debug\net8.0\5T25_Limet_BatailleNaval.runtimeconfig.json
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\bin\Debug\net8.0\5T25_Limet_BatailleNaval.dll
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\bin\Debug\net8.0\5T25_Limet_BatailleNaval.pdb
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.AssemblyInfoInputs.cache
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.AssemblyInfo.cs
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.csproj.CoreCompileInputs.cache
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.dll
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\refint\5T25_Limet_BatailleNaval.dll
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.pdb
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\5T25_Limet_BatailleNaval.genruntimeconfig.cache
+C:\Users\Max\Desktop\Ecole\Progra\5T25_Limet_BatailleNaval\obj\Debug\net8.0\ref\5T25_Limet_BatailleNaval.dll
