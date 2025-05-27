@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace _5T25_Limet_BatailleNaval
         /// On remplis la grille avec * qui représente l'eau
         /// </summary>
         /// <param name="grille">Le plateau de jeu</param>
-        public void iniGrille(char[,] grille)
+        public char[,] iniGrille(char[,] grille)
         {
             char eau = '*'; // symbole de l'eau
             for (int iColonne = 0; iColonne < 10; iColonne++)
@@ -22,6 +22,7 @@ namespace _5T25_Limet_BatailleNaval
                     grille[iLigne, iColonne] = eau;
                 }
             }
+            return grille;
         }
         /// <summary>
         /// Fonction pour afficher la grille
@@ -51,29 +52,49 @@ namespace _5T25_Limet_BatailleNaval
         /// Fonction pour placer les bateaux
         /// </summary>
         /// <param name="grille">Le plateau de jeu</param>
-        public void placeBateaux(char[,] grille)
+        public char[,] placeBateaux(char[,] grille)
         {
             char bateau = 'B'; // symbole des bateux
             int i = 0;
-            int taille = 5; 
-            int iLigneU;
-            int iColonneU;
+            int taille = 5;
+            string ligneU;
+            string colonneU;
+            int colonne;
+            int ligne;
             string horyzontal = "oui";
-            for (int continuer = 0; continuer < 4; continuer++)
+            for (int continuer = 0; continuer < 1; continuer++)
             {
                 Console.WriteLine("voulez-vous mettre votre bateaux à l'horyzontal ?");
                 horyzontal = Console.ReadLine();
-                Console.WriteLine("Donné moi une colonne");
-                iLigneU = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Donné moi une ligne");
-                iColonneU = Convert.ToInt32(Console.ReadLine());
+                do
+                {
+                    Console.WriteLine("donner moi une colonne");
+                    ligneU = Console.ReadLine();
+                    while (!int.TryParse(ligneU, out ligne))
+                    {
+                        Console.WriteLine("Cela n'est pas un entier");
+                        Console.WriteLine("donner moi une colonne");
+                        ligneU = Console.ReadLine();
+                    }
+                } while (ligne < 0 || ligne > 9);
+                do
+                {
+                    Console.WriteLine("Donne moi une ligne");
+                    colonneU = Console.ReadLine();
+                    while (!int.TryParse(colonneU, out colonne))
+                    {
+                        Console.WriteLine("Cela n'est pas un entier");
+                        Console.WriteLine("Donne moi une ligne");
+                        colonneU = Console.ReadLine();
+                    }
+                } while (colonne < 0 || colonne > 9);
                 if (horyzontal == "oui")
                 {
                     if (taille + i < grille.GetLength(0))
                     {
                         for (int place = 0; place < taille; place++)
                         {
-                            grille[iLigneU + place, iColonneU] = bateau;
+                            grille[ligne + place, colonne] = bateau;
                         }
                     }
                     else
@@ -83,11 +104,11 @@ namespace _5T25_Limet_BatailleNaval
                 }
                 else
                 {
-                    if ( taille + i < grille.GetLength(1))
+                    if (taille + i < grille.GetLength(1))
                     {
                         for (int place = 0; place < taille; place++)
                         {
-                            grille[iLigneU, iColonneU + place] = bateau;
+                            grille[ligne, colonne + place] = bateau;
                         }
                     }
                     else
@@ -97,47 +118,95 @@ namespace _5T25_Limet_BatailleNaval
                 }
                 taille = taille - 1;
             }
+            return grille;
         }
-        public void coordonnéesDesMissiles(char [,] grille)
+
+        public void CoordonneesDesMissiles(char [,] grille, char[,] grilleJ1, char[,] grilleJ2, out char[,] grilleMJ1, out char[,] grilleMJ2, ref bool tourJ1, ref int scoreJ1, ref int scoreJ2)
         {
-            int iLigne;
-            int iColonne;
+            char bateau = 'B'; // symbole des bateux
+            char batTouche = 'O';
+            char rien = 'X';
             string ligneU;
             int ligne;
             string colonneU;
             int colonne;
-            do
+            grilleMJ2 = new char[grille.GetLength(0), grille.GetLength(1)];
+            grilleMJ1 = new char[grille.GetLength(0), grilleJ2.GetLength(1)];
+            if (tourJ1 == true)
             {
-                Console.WriteLine("donner moi une ligne");
-                ligneU = Console.ReadLine();
-                while (!int.TryParse(ligneU, out ligne))
+                do
                 {
-                    Console.WriteLine("Cela n'est pas un entier");
-                    Console.WriteLine("donner moi une ligne");
+                    Console.WriteLine("donner moi une colone");
                     ligneU = Console.ReadLine();
-                }
-            } while (ligne < 0 || ligne > 9);
+                    while (!int.TryParse(ligneU, out ligne))
+                    {
+                        Console.WriteLine("Cela n'est pas un entier");
+                        Console.WriteLine("donner moi une colonne");
+                        ligneU = Console.ReadLine();
+                    }
+                } while (ligne < 0 || ligne > 9);
 
-            do
-            {
-                Console.WriteLine("Donne moi une colonne");
-                colonneU = Console.ReadLine();
-                while (!int.TryParse (colonneU, out colonne))
+                do
                 {
-                    Console.WriteLine("Cela n'est pas un entier");
-                    Console.WriteLine("Donne moi une colonne");
+                    Console.WriteLine("Donne moi une ligne");
                     colonneU = Console.ReadLine();
-                }
-            } while(colonne < 0 || colonne > 9);
-            int[,] missile = new int[ligne, colonne];
-            for (iLigne = 0; iLigne < grille.GetLength(0); iLigne++)
-            {
-                for (iColonne = 0;iColonne < grille.GetLength(1); iColonne++)
+                    while (!int.TryParse(colonneU, out colonne))
+                    {
+                        Console.WriteLine("Cela n'est pas un entier");
+                        Console.WriteLine("Donne moi une ligne");
+                        colonneU = Console.ReadLine();
+                    }
+                } while (colonne < 0 || colonne > 9);
+                if (grilleJ1[ligne, colonne] == bateau)
                 {
+                    grilleMJ1[ligne, colonne] = batTouche;
+                    tourJ1 = false;
+                    scoreJ1 += 1;
+                }
+                else
+                {
+                    grilleMJ1[ligne, colonne] = rien;
+                    tourJ1 = false;
                 }
             }
-            
+            else
+            {
+                do
+                {
+                    Console.WriteLine("donner moi une colone");
+                    ligneU = Console.ReadLine();
+                    while (!int.TryParse(ligneU, out ligne))
+                    {
+                        Console.WriteLine("Cela n'est pas un entier");
+                        Console.WriteLine("donner moi une colonne");
+                        ligneU = Console.ReadLine();
+                    }
+                } while (ligne < 0 || ligne > 9);
 
+                do
+                {
+                    Console.WriteLine("Donne moi une ligne");
+                    colonneU = Console.ReadLine();
+                    while (!int.TryParse(colonneU, out colonne))
+                    {
+                        Console.WriteLine("Cela n'est pas un entier");
+                        Console.WriteLine("Donne moi une ligne");
+                        colonneU = Console.ReadLine();
+                    }
+                } while (colonne < 0 || colonne > 9);
+                if (grilleJ2[ligne, colonne] == bateau)
+                {
+                    grilleMJ2[ligne, colonne] = batTouche;
+                    tourJ1 = true;
+                    scoreJ2 += 1;
+                }
+                else
+                {
+                    grilleMJ2[ligne, colonne] = rien;
+                    tourJ1 = true;
+                }
+            }
         }
+
     }
 }

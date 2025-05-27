@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "H:\\5TTI\\5TTI_Progra\\UAA9_Bataille_Navale\\5T25_Limet_BatailleNaval\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|h:\\5tti\\5tti_progra\\uaa9_bataille_navale\\5t25_limet_bataillenaval\\mesoutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|solutionrelative:mesoutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|h:\\5tti\\5tti_progra\\uaa9_bataille_navale\\5t25_limet_bataillenaval\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|h:\\5tti\\5tti_progra\\uaa9_bataille_navale\\5t25_limet_bataillenaval\\mesoutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|solutionrelative:mesoutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{28968B01-792E-4F82-AFED-4BFE5082B401}|5T25_Limet_BatailleNaval.csproj|h:\\5tti\\5tti_progra\\uaa9_bataille_navale\\5t25_limet_bataillenaval\\5t25_limet_bataillenaval.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -22,30 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "mesOutils.cs",
               "DocumentMoniker": "H:\\5TTI\\5TTI_Progra\\UAA9_Bataille_Navale\\5T25_Limet_BatailleNaval\\mesOutils.cs",
               "RelativeDocumentMoniker": "mesOutils.cs",
               "ToolTip": "H:\\5TTI\\5TTI_Progra\\UAA9_Bataille_Navale\\5T25_Limet_BatailleNaval\\mesOutils.cs",
               "RelativeToolTip": "mesOutils.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAswFUAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAWwHsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:22:57.361Z",
+              "WhenOpened": "2025-05-27T12:48:59.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\5TTI\\5TTI_Progra\\UAA9_Bataille_Navale\\5T25_Limet_BatailleNaval\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "H:\\5TTI\\5TTI_Progra\\UAA9_Bataille_Navale\\5T25_Limet_BatailleNaval\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ToolTip": "H:\\5TTI\\5TTI_Progra\\UAA9_Bataille_Navale\\5T25_Limet_BatailleNaval\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwD0AAACVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T13:17:05.309Z",
               "EditorCaption": ""

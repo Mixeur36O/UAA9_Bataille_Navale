@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("5T25_Limet_BatailleNaval")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37d8e3d19b497ac40430b8ccb22774fe9a01597e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dabf128c07594cbaf12565f47b43734e208403f")]
 [assembly: System.Reflection.AssemblyProductAttribute("5T25_Limet_BatailleNaval")]
 [assembly: System.Reflection.AssemblyTitleAttribute("5T25_Limet_BatailleNaval")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
