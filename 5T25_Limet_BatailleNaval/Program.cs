@@ -14,12 +14,12 @@
                 string pseudo2 = ""; // pseudo du deuxième joueur
                 const int tailleG = 10; // taille de la grille
                 char[,] grille = new char[tailleG, tailleG]; // La grille
-                char[,] grilleJ1;
-                char[,] grilleJ2;
                 int scoreJ1 = 0;
                 int scoreJ2 = 0;
-                char[,] grilleMJ1;
-                char[,] grilleMJ2;
+                char[,] grilleJ1 = (outil.iniGrille(grille));
+                char[,] grilleJ2 = (outil.iniGrille(grille));
+                char [,] grilleMJ1 = (outil.iniGrille(grille));
+                char[,] grilleMJ2 = (outil.iniGrille(grille));
                 string terminer = "oui";
                 bool tourJ1 = true;
 
@@ -32,13 +32,14 @@
 
                 do
                 {
-                    outil.iniGrille(grille);
+                    Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                    Console.WriteLine("///////////////////////////////////////////");
                     Console.WriteLine(pseudo1 + " placez vos bateaux");
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
-                    outil.AfficherGrille(grille);
+                    outil.AfficherGrille(grilleJ1);
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
-                    grilleJ1 = (outil.placeBateaux1(grille, tourJ1));
+                    outil.placeBateaux1(grille, ref grilleJ1, ref grilleJ2, tourJ1);
                     outil.AfficherGrille(grilleJ1);
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
@@ -48,13 +49,15 @@
 
                 do
                 {
+                    Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                    Console.WriteLine("///////////////////////////////////////////");
                     outil.iniGrille(grille);
                     Console.WriteLine(pseudo2 + " placez vos bateaux");
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                     outil.AfficherGrille(grille);
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
-                    grilleJ2 = (outil.placeBateaux1(grille, tourJ1));
+                    outil.placeBateaux1(grille, ref grilleJ1, ref grilleJ2, tourJ1);
                     outil.AfficherGrille(grilleJ2);
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                     Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
@@ -67,21 +70,39 @@
                     {
                         outil.AfficherGrille(grilleJ1);
                         outil.AfficherGrille(grilleJ2);
+                        Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                        Console.WriteLine("///////////////////////////////////////////");
                         Console.WriteLine(pseudo1 + " Ou voulez-vous visez");
                         Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
-                        outil.iniGrille(grille);
-                        outil.AfficherGrille(grille);
+                        grilleMJ1 = (outil.iniGrille(grille));
+                        outil.AfficherGrille(grilleMJ1);
                         Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                         Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
-                        grilleMJ1 = (outil.CoordonneesDesMissiles(grille, grilleJ1, ref tourJ1));
+                        outil.CoordonneesDesMissiles(grille, grilleJ1, grilleJ2, ref grilleMJ1, ref grilleMJ2, ref tourJ1);
                         outil.AfficherGrille(grilleMJ1);
                         Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
                         Console.WriteLine("///////////////////////////////////////////");
                         Console.WriteLine("Avez-vous terminer ?");
                         terminer = Console.ReadLine();
                     } while (terminer != "oui");
+                    do
+                    {
+                        Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                        Console.WriteLine("///////////////////////////////////////////");
+                        Console.WriteLine(pseudo2 + " Ou voulez-vous visez");
+                        Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                        grilleMJ2 = (outil.iniGrille(grille));
+                        outil.AfficherGrille(grilleMJ2);
+                        Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                        Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                        outil.CoordonneesDesMissiles(grille, grilleJ1, grilleJ2, ref grilleMJ1, ref grilleMJ2, ref tourJ1);
+                        outil.AfficherGrille(grilleMJ2);
+                        Console.WriteLine("////////////////////////////////////////////////////////////////////////////");
+                        Console.WriteLine("///////////////////////////////////////////");
+                        Console.WriteLine("Avez-vous terminer ?");
+                        terminer = Console.ReadLine();
+                    } while (terminer != "oui");
                 } while (scoreJ1 != 14 && scoreJ2 != 14);
-
                 Console.WriteLine("Voulez-vous recommencer");
                 recommencer = Console.ReadLine();
             } while (recommencer != "non");
